@@ -1,24 +1,14 @@
 # Email Validator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
-
-* System dependencies
-
-* Configuration
+  ruby 2.7.2
+  
+* installation
+  bundle install
 
 * Database creation
+  rails db:create
+  rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* configuration
+  Add mailboxlayer access key to MAILBOX_ACCESS_KEY env variable.
