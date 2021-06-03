@@ -1,0 +1,25 @@
+<div class="mx-auto mt-5 email-validator-form">
+  <%= render 'flash' %>
+  <h3 class="mb-5 font-weight-bold">E-Mail Validator</h3>
+  <%= form_for(:email_validator, url: {action: 'create'}, :html => { method: :post}) do |f| %>
+    <div class="form-group">
+      <%= f.label :first_name, 'First Name', class: 'control-label' %>
+      <%= f.text_field :first_name, class: 'form-control form-control-lg', required: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name, 'Last Name', class: 'control-label' %>
+      <%= f.text_field :last_name, class: 'form-control form-control-lg', required: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :url, 'URL', class: 'control-label' %>
+      <%= f.text_field :url, class: 'form-control form-control-lg', required: true %>
+    </div>
+    <div class="text-center">
+      <%= f.submit "Search", class: "form-control form-control-lg font-weight-bold" %>
+    </div>
+  <% end %>
+  <p id="email_validator-errors"></p>
+  <div id="email-list">
+    <%= render 'show_email' %>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<h3 class="mb-4 font-weight-bold">Results</h3>
+<% @email_validators.each do |email_validator| %>
+  <p class="email-details d-flex align-items-center justify-content-between">
+    <%= email_validator.email %> <span>(<%= fetch_full_name(email_validator) %>)</span>
+  </p>
+<% end %>

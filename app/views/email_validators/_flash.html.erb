@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+  <div class="alert alert-info">
+    <div class="container text-center">
+      <%= flash[:notice].html_safe %>
+    </div>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-danger flash-error">
+    <div class="container text-center">
+      <%= flash[:error].html_safe %>
+    </div>
+  </div>
+<% end %>
